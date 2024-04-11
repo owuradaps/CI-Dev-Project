@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+/* General styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generic project styles */
+    color: #3a3a3a;
+    font-family: 'Lato', sans-serif;
+}
+
 /*header*/
 header {
     background-color: lightcoral;
@@ -12,6 +22,8 @@ header {
 /*main*/
 main {
     background-color: lightblue;
+     /* Enlarge main element to push footer down*/
+     flex: 1 0 auto;
 }
 /*footer*/
 Footer {
