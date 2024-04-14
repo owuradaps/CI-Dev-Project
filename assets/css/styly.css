@@ -1,4 +1,4 @@
-/* Google fonts import */
+* Google fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 /* Asterisk wildcard selector to override default styles added by the browser */
@@ -19,7 +19,7 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: 'oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #252525;
@@ -29,7 +29,7 @@ h1, h2, h3 {
     display: none;
 }
 
-/*header*/
+/* Header */
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -47,15 +47,16 @@ header a {
     color: inherit;
 }
 
-
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
     list-style-type: none;
 }
-#munu >li {
+
+#menu > li {
     margin-bottom: 1em;
 }
+
 .active {
     border-bottom: 1px solid #3a3a3a;
 }
@@ -85,19 +86,22 @@ nav {
     font-size: 2rem;
 }
 
-/*main*/
+/* Main content */
 main {
-
-     /* Enlarge main element to push footer down*/
-     flex: 1 0 auto;
-     margin-top: 47px;
+    /* Enlarge main element to push footer down*/
+    flex: 1 0 auto;
+    /* Add margin at the top to prevent content from being covered by the header */
+    margin-top: 47px;
+    /* Enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Hero section */
 #hero {
     height: 600px;
     width: 100%;
-    background:url("../images/hero-image.webp") no-repeat center center/cover;
+    background: url("../images/hero-image.webp") no-repeat center center/cover;
     position: relative;
 }
 
@@ -113,33 +117,33 @@ main {
     padding-left: 10px;
 }
 
-
 #cover-text > h2, #cover-text > h3 {
     color: #ffffff;
 }
 
+/* Reasons section */
 #reasons {
     width: 90%;
     margin: 20px auto;
 }
-  
+
 #reasons h2 {
     margin-bottom: 20px;
     text-align: center;
     font-size: 280%;
 }
-  
-#benefits-physical>div,
-#benefits-mental>div {
+
+#benefits-physical > div,
+#benefits-mental > div {
     line-height: 20px;
     margin-bottom: 20px;
 }
-  
+
 #benefits p {
     padding: 0 20px;
 }
-  
-#benefit hr {
+
+#benefits hr {
     border-top: 1px solid #3a3a3a;
     margin: 5px 0;
 }
@@ -176,7 +180,7 @@ main {
     text-align: center;
     /* This will not wrap on screens of less than 400px wide.
     Each div will expand to fill the available space on its row */
-   flex-basis: 200px;
+    flex-basis: 200px;
     flex-grow: 1;
     /* Creates a grid of meetup time dives over the background image */
     border: 2px solid white;
@@ -186,7 +190,6 @@ main {
     /* Override the heading colour set in general styles */
     color: #fafafa;
 }
-
 
 /* Gallery page */
 #photos img {
@@ -198,7 +201,57 @@ main {
     line-height: 0;
 }
 
-  
+/* Form */
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+
+#signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    font-size: 100%;
+    background-color: #454b1b;
+    color: #fafafa;
+}
+
 /* Footer */
 #social-networks {
     text-align: center;
@@ -251,41 +304,62 @@ main {
         margin: 0 0.5rem;
     }
 
-     /* Main content */
-     main {
+    /* Main content */
+    main {
         /* Push main content down to accommodate larger header */
         margin-top: 79px;
     }
 
-     /* Hero */
-     #cover-text {
+    /* Hero */
+    #cover-text {
         width: 300px;
         right: 50px;
     }
 
-      /* Reasons section */
-      #benefits-physical,
-      #benefits-mental {
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-      }
-  
-      #benefits-physical>div,
-      #benefits-mental>div {
-          width: 75%;
-      }
-  
-      #benefits-mental>div {
-          text-align: end;
-          align-self: flex-end;
-      }
+    /* Reasons section */
+    #benefits-physical,
+    #benefits-mental {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 
-       /* Gallery */
+    #benefits-physical > div,
+    #benefits-mental > div {
+        width: 75%;
+    }
+
+    #benefits-mental > div {
+        text-align: end;
+        align-self: flex-end;
+    }
+
+    /* Gallery */
     #photos {
         column-count: 3;
     }
-  
+
+    /* Form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16c6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
+    }
 }
 
 /* Large devices (laptops and desktops, 992px and up) */

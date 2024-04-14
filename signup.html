@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Meta tags for search engines -->
     <meta name="description"
@@ -26,8 +27,9 @@
             <h1 id="logo">Love Running</h1>
         </a>
         <input type="checkbox" id="nav-toggle" name="nav-toggle">
-        <label for="nav-toggle" class="nav-toggle-label"><i class="fa-solid fa-bars"></i></label>
-        
+        <label for="nav-toggle" class="nav-toggle-label">
+            <i class="fa-solid fa-bars"></i>
+        </label>
         <nav>
             <ul id="menu">
                 <li><a href="index.html">Home</a></li>
@@ -36,8 +38,39 @@
             </ul>
         </nav>
     </header>
-    <!-- main content -->
-    <main>Main Content</main>
+    
+    <!-- Main content -->
+    <main>
+        <section id="signup">
+            <form id="signup-form" method="POST" action="https://formdump.codeinstitute.net">
+                <h2><i class="fa-solid fa-heartbeat"></i> Let's get you signed up!</h2>
+                <label for="first-name">First Name</label>
+                <input type="text" name="first_name" id="first-name" class="text-input" required>
+                <br>
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last_name" id="last-name" class="text-input" required>
+                <br>
+                <label for="email-address">Email Address</label>
+                <input type="email" name="email_address" id="email-address" class="text-input" required>
+                <br>
+                <div class="radio-buttons">
+                    <div>
+                        <label for="road">Road</label>
+                        <input type="radio" name="running_preference" id="road" value="road" required checked>
+                    </div>
+                    <div>
+                        <label for="trail">Trail</label>
+                        <input type="radio" name="running_preference" id="trail" value="trail" required>
+                    </div>
+                    <div>
+                        <label for="both">Both</label>
+                        <input type="radio" name="running_preference" id="both" value="both" required>
+                    </div>
+                </div>
+                <button type="submit" class="join-button">Let's Run!</button>
+            </form>
+        </section>
+    </main>
     <!-- footer -->
     <footer>
     <ul id="social-networks">
